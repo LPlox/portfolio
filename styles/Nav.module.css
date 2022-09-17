@@ -1,0 +1,27 @@
+.nav {
+  max-width: var(--max-width);
+  border-bottom: var(--border-light);
+}
+
+.introText {
+  padding: 0;
+  margin: 0;
+  font-family: "Gulax", Arial, Helvetica, sans-serif;
+}
+
+/* SM */
+@media (max-width: 480px) {
+  .nav {
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/* Above SM */
+@media (min-width: 480px) {
+  .nav {
+    padding: 20px 30px;
+    font-size: 20px;
+  }
+}

@@ -1,9 +1,34 @@
+:root {
+  --background-light: #f7f6f2;
+  --foreground-light: #282828;
+
+  --yellow: #fde138;
+  --orange: #ffa61e;
+  --blue: #2e66f5;
+  --green: #12ab27;
+  --red: #ed3920;
+
+  --border-light: 1px solid var(--foreground-light);
+}
+
+@font-face {
+  font-family: "Gulax";
+  src: url("../assets/fonts/Gulax-Regular.otf") format("opentype"), url("../assets/fonts/Gulax-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Gulax-Regular.woff") format("woff"), url("../assets/fonts/Gulax-Regular.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* For anchor link smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -11,11 +36,87 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+a:focus-visible {
+  outline: 1px solid var(--foreground-light);
+  outline-offset: 2px 6px;
+}
+
+/* Skip to content */
+.assistive-text {
+  top: 0px;
+  left: 0;
+  position: absolute;
+  background: var(--foreground-light);
+  color: var(--background-light);
+  height: auto;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  outline: none;
+}
+
+.assistive-text:focus {
+  transform: translateY(0%);
+}
+
+/* 
+Smallest width of smartphones is 300px. Samsung fold front screen is 320x519.
+The screen can be resized to 300px.
+
+--mobile-width: 480px;
+--tablet-width: 600px;
+--desktop-width: 960px;
+--wide-screen-width: 1440px;
+--max-width: 1600px; 
+
+The best breakpoint for ultra wide screens are between 1400 to 1600px depending on content.
+*/
+
+/* SM */
+@media (max-width: 480px) {
+}
+
+/* Above SM */
+@media (min-width: 480px) {
+}
+
+/* Below M */
+@media (max-width: 600px) {
+}
+
+/* M */
+@media (min-width: 600px) and (max-width: 960px) {
+}
+
+/* Above M */
+@media (max-width: 960px) {
+}
+
+/* L */
+@media (min-width: 960px) and (max-width: 1440px) {
+}
+
+/* XL */
+@media (min-width: 1440px) and (max-width: 1600px) {
+}
+
+/* Animation yes */
+@media (prefers-reduced-motion: no-preference) {
+}
+
+/* Animation no */
+@media (prefers-reduced-motion: reduce) {
+}
+
+@media (prefers-color-scheme: light) {
 }
 
 @media (prefers-color-scheme: dark) {
+}
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -23,4 +124,22 @@ a {
     color: white;
     background: black;
   }
+}
+
+
+@media (prefers-color-scheme: light) {
+	html {
+	  color-scheme: light;
+	}
+	body {
+	  color: white;
+	  background: black;
+	}
+  }
+  
+ */
+
+body {
+  background: var(--background-light);
+  color: var(--foreground-light);
 }
