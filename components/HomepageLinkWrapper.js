@@ -38,7 +38,7 @@ export default function HomepageLinkWrapper({ project }) {
   }
 
   return (
-    <a className={style.linkwrapper} href={`/project/${project.slug}`} onScroll={handleScroll} ref={linkRef}>
+    <a className={style.linkwrapper} href={`${project.slug}`} onScroll={handleScroll} ref={linkRef} target="_blank" rel="noreferrer">
       {/* {scrollX > 100 ? "Scrolled more than 100px" : "Still somewhere near the top!"} */}
       {doubleLinkArr.map((component, index) => {
         let Component = components[component.type];

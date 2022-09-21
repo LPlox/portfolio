@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "../styles/ImageContainer.module.css";
-const imageClasses = { spin: style.spin };
+const imageClasses = { spin: style.spin, spinBackwards: style.spinBackwards };
 
 export default function ImageContainer({ image, styling }) {
   const imageClass = imageClasses[styling] ? imageClasses[styling] : "";

@@ -11,6 +11,7 @@
   /* Removing scrollbar */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  border-bottom: var(--border-light);
 }
 
 .linkwrapper::-webkit-scrollbar {

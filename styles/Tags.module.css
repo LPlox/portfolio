@@ -1,5 +1,13 @@
 .tagswrapper {
+  /* margin: auto var(--homepage-link-margin-left);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column; */
+
   margin: auto var(--homepage-link-margin-left);
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
 }
 
 .tagbutton {
