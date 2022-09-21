@@ -9,11 +9,42 @@
   --red: #ed3920;
 
   --border-light: 1px solid var(--foreground-light);
+
+  --homepage-body-padding-desktop: 30px;
+  --homepage-body-padding-mobile: 16px;
+  --homepage-link-margin-left: 8px;
+
+  --gulax-font: "Gulax", Arial, Helvetica, sans-serif;
+  --pilowlava-font: "Pilowlava", "Gulax", Arial, Helvetica, sans-serif;
+  --picnic-font: "PicNic", "Gulax", Arial, Helvetica, sans-serif;
+  --typefesse-font: "Typefesse", "Gulax", Arial, Helvetica, sans-serif;
+  --solide-mirage-font: "Solide Mirage", "Gulax", Arial, Helvetica, sans-serif;
+  --inter-font: "Inter", Arial, Helvetica, sans-serif;
 }
 
 @font-face {
   font-family: "Gulax";
   src: url("../assets/fonts/Gulax-Regular.otf") format("opentype"), url("../assets/fonts/Gulax-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Gulax-Regular.woff") format("woff"), url("../assets/fonts/Gulax-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pilowlava";
+  src: url("../assets/fonts/Pilowlava-Regular.otf") format("opentype"), url("../assets/fonts/Pilowlava-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Pilowlava-Regular.woff") format("woff"), url("../assets/fonts/Pilowlava-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PicNic";
+  src: url("../assets/fonts/PicNic-Regular.otf") format("opentype"), url("../assets/fonts/PicNic-Regular.eot") format("embedded-opentype"), url("../assets/fonts/PicNic-Regular.woff") format("woff"), url("../assets/fonts/PicNic-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Typefesse";
+  src: url("../assets/fonts/Typefesse_Claire-Obscure.otf") format("opentype"), url("../assets/fonts/Typefesse_Claire-Obscure.eot") format("embedded-opentype"), url("../assets/fonts/Typefesse_Claire-Obscure.woff") format("woff"), url("../assets/fonts/Typefesse_Claire-Obscure.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Solide Mirage";
+  src: url("../assets/fonts/SolideMirage-Mono.otf") format("opentype"), url("../assets/fonts/Solide_Mirage-Mono_web.eot") format("embedded-opentype"), url("../assets/fonts/Solide_Mirage-Mono_web.woff") format("woff"), url("../assets/fonts/Solide_Mirage-Mono_web.woff2") format("woff2"), url("../assets/fonts/Solide_Mirage-Mono_web.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Light.otf") format("opentype"), url("../assets/fonts/Inter-Light.woff") format("woff"), url("../assets/fonts/Inter-Light.woff2") format("woff2"), url("../assets/fonts/Inter-Light.ttf") format("truetype");
 }
 
 * {
@@ -29,6 +60,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 a {
