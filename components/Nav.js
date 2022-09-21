@@ -1,4 +1,4 @@
-import styles from "../styles/Nav.module.css";
+import style from "../styles/Nav.module.css";
 
 export default function Nav() {
   return (
@@ -7,8 +7,8 @@ export default function Nav() {
         Skip to main content
       </a>
 
-      <nav className={styles.nav}>
-        <p className={styles.introText}>Lina Wang • Stockholm • Sweden</p>
+      <nav className={style.nav}>
+        <p className={style.introText}>Lina Wang • Stockholm • Sweden</p>
       </nav>
     </header>
   );

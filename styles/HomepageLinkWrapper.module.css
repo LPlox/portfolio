@@ -1,0 +1,32 @@
+.linkwrapper {
+  display: flex;
+  padding: 16px 0;
+  overflow-x: auto;
+  height: 135px;
+  flex-wrap: nowrap;
+  width: auto;
+  width: 100vw;
+  position: relative;
+
+  /* Removing scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.linkwrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* SM */
+/* @media (max-width: 480px) {
+  .linkwrapper {
+    padding-left: var(--homepage-body-padding-mobile);
+  }
+} */
+
+/* Above SM */
+/* @media (min-width: 480px) {
+  .linkwrapper {
+    padding-left: var(--homepage-body-padding-desktop);
+  }
+} */

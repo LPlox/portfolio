@@ -1,0 +1,17 @@
+.tagswrapper {
+  margin: auto var(--homepage-link-margin-left);
+}
+
+.tagbutton {
+  height: 44px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-light);
+  font-size: 24px;
+  font-family: var(--gulax-font);
+  padding: 4px 24px 0px;
+  text-transform: uppercase;
+  margin: 5px;
+}

@@ -1,0 +1,21 @@
+.title {
+  font-size: 60px;
+  margin: auto var(--homepage-link-margin-left);
+  white-space: nowrap;
+}
+
+.title.gulax {
+  font-family: var(--gulax-font);
+}
+.title.pilowlava {
+  font-family: var(--pilowlava-font);
+}
+.title.picnic {
+  font-family: var(--picnic-font);
+}
+.title.typefesse {
+  font-family: var(--typefesse-font);
+}
+.title.solide-mirage {
+  font-family: var(--solide-mirage-font);
+}

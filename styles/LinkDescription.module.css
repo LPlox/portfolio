@@ -1,0 +1,8 @@
+.description {
+  min-width: 300px;
+  height: 100%;
+  margin: auto var(--homepage-link-margin-left);
+  display: flex;
+  align-items: center;
+  font-family: var(--inter-font);
+}

@@ -1,11 +1,22 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import Nav from "../components/Nav";
 import LinkWrapper from "../components/HomepageLinkWrapper";
 
-const projectList = [{ fontIndex: "0", order: { ImageContainer: "circular.png", TitleContainer: "Svensk plast webpage" } }];
+const projectList = [
+  {
+    slug: "svensk-plast-webpage",
+    order: [
+      { type: "ImageContainer", params: { image: "circular.png", styling: "spin" } },
+      { type: "TitleContainer", params: { title: "Svensk plast webpage", fonttype: "gulax" } },
+      { type: "ImageContainer", params: { image: "circular.png", styling: "spin" } },
+      { type: "Tags", params: { tags: ["wordpress", "javascript"] } },
+      { type: "LinkDescription", params: { description: "Development notes: Animated graphical svg elements on scroll" } },
+      { type: "ImageContainer", params: { image: "arrow_right.png", styling: "" } },
+    ],
+  },
+];
 
 export default function Home() {
   return (
