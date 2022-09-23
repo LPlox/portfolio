@@ -7,6 +7,7 @@
   width: auto;
   width: 100vw;
   position: relative;
+  overflow-y: hidden;
 
   /* Removing scrollbar */
   -ms-overflow-style: none; /* IE and Edge */

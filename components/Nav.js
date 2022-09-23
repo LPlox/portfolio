@@ -8,7 +8,10 @@ export default function Nav() {
       </a>
 
       <nav className={style.nav}>
-        <p className={style.introText}>Lina Wang • Stockholm • Sweden</p>
+        <p className={style.introText}>Lina Wang • Front End Developer • Portfolio • 2022 • Stockholm</p>
+        {/* <a>LinkedIn</a>
+        <a>Github</a>
+        <a>Lighthouse</a> */}
       </nav>
     </header>
   );

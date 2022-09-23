@@ -81,7 +81,7 @@ const projectList = [
     slug: "https://player.vimeo.com/video/716758661?h=b870e802ee&dnt=1&app_id=122963",
     order: [
       { type: "TitleContainer", params: { title: "FISH OF YOU", fonttype: "picnic" } },
-      { type: "ImageContainer", params: { image: "fish.png", styling: "" } },
+      { type: "ImageContainer", params: { image: "fishbones.png", styling: "" } },
       { type: "TitleContainer", params: { title: "TIKTOK FILTER", fonttype: "picnic" } },
       { type: "ImageContainer", params: { image: "fishbones.png", styling: "" } },
       { type: "Tags", params: { tags: ["3D", "Effect house", "tiktok"] } },
@@ -106,14 +106,22 @@ export default function Home() {
         ))}
       </main>
 
-      {/* <footer className={styles.footer}>
-        <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
+      <footer className={styles.footer}>
+        <p>
+          2020 | Dogs icons by Anya Derevyanko from{" "}
+          <a href="https://thenounproject.com/browse/collection-icon/dogs-140344/?p=1" target="_blank" rel="noreferrer">
+            Noun Project
+          </a>
+          | Train icons by Lluisa Iborra from{" "}
+          <a href="https://thenounproject.com/browse/collection-icon/toy-train-40887/?p=1" target="_blank" rel="noreferrer">
+            Noun Project
+          </a>
+          | Fish icon by DinosoftLab from{" "}
+          <a href="https://thenounproject.com/icon/fish-1375938/" target="_blank" rel="noreferrer">
+            Noun Project
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
