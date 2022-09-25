@@ -2,6 +2,13 @@
   --background-light: #f7f6f2;
   --foreground-light: #282828;
 
+  --project-height-desktop: 135px;
+  --footer-height: 65px;
+  --number-of-projects: 7;
+  --height-of-all-projects-desktop: 945px; /* Needs to be manually calculated and changed in HomePageLinkWrapper.module.css */
+
+  --project-height-XL: calc(90vh / var(--number-of-projects));
+
   --yellow: #fde138;
   --orange: #ffa61e;
   --blue: #2e66f5;
@@ -145,6 +152,10 @@ The best breakpoint for ultra wide screens are between 1400 to 1600px depending 
 }
 
 @media (prefers-color-scheme: dark) {
+}
+
+/* When project height doesn't fill window height. Manual calculation */
+@media (min-height: 945px) {
 }
 
 /* @media (prefers-color-scheme: dark) {

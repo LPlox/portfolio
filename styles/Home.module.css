@@ -10,6 +10,13 @@
   padding: var(--homepage-link-margin-left);
   border-top: var(--border-light);
   width: 100%;
+  height: var(--footer-height);
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.footer a {
+  border-bottom: 1px solid var(--foreground-light);
 }
 
 /* 

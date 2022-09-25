@@ -111,11 +111,11 @@ export default function Home() {
           2020 | Dogs icons by Anya Derevyanko from{" "}
           <a href="https://thenounproject.com/browse/collection-icon/dogs-140344/?p=1" target="_blank" rel="noreferrer">
             Noun Project
-          </a>
+          </a>{" "}
           | Train icons by Lluisa Iborra from{" "}
           <a href="https://thenounproject.com/browse/collection-icon/toy-train-40887/?p=1" target="_blank" rel="noreferrer">
             Noun Project
-          </a>
+          </a>{" "}
           | Fish icon by DinosoftLab from{" "}
           <a href="https://thenounproject.com/icon/fish-1375938/" target="_blank" rel="noreferrer">
             Noun Project

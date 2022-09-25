@@ -15,6 +15,27 @@
   border-bottom: var(--border-light);
 }
 
+/* Below S */
+@media (max-width: 600px) {
+  .linkwrapper {
+    height: 80px;
+  }
+}
+
+/* Above S */
+@media (min-width: 600px) {
+  .linkwrapper {
+    height: var(--project-height-desktop);
+  }
+}
+
+/* When project height doesn't fill window height. Manual calculation */
+@media (min-height: 945px) {
+  .linkwrapper {
+    height: var(--project-height-XL);
+  }
+}
+
 .linkwrapper::-webkit-scrollbar {
   display: none;
 }
