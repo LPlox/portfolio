@@ -70,9 +70,9 @@ export default function HomepageLinkWrapper({ project }) {
       container.scrollLeft = maxScrollLeft;
     }
   }
-  //
+
   return (
-    <a className={style.linkwrapper} href={`${project.slug}`} onMouseEnter={pauseScrollAnimation} onMouseLeave={continueScrollAnimation} onScroll={handleScroll} ref={linkRef} target="_blank" rel="noreferrer">
+    <a className={style.linkwrapper} href={`${project.slug}`} onMouseEnter={pauseScrollAnimation} onMouseLeave={continueScrollAnimation} onTouchStart={pauseScrollAnimation} onScroll={handleScroll} ref={linkRef} target="_blank" rel="noreferrer">
       {doubleLinkArr.map((component, index) => {
         let Component = components[component.type];
         return <Component key={index} {...component.params} />;
