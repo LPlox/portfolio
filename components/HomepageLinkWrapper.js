@@ -26,6 +26,7 @@ export default function HomepageLinkWrapper({ project }) {
     linkRef.current.scrollLeft = linkRef.current.scrollWidth / 4 - 10;
 
     // ScrollCount
+    previousTimeRef.current = linkRef.current.scrollWidth / 4 - 10;
     requestRef.current = requestAnimationFrame(animateScroll);
     return () => cancelAnimationFrame(requestRef.current);
   }, []);
