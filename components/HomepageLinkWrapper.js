@@ -50,8 +50,10 @@ export default function HomepageLinkWrapper({ project }) {
   };
 
   const continueScrollAnimation = () => {
-    hover = false;
-    previousTimeRef.current = linkRef.current.scrollLeft;
+    setInterval(() => {
+      hover = false;
+      previousTimeRef.current = linkRef.current.scrollLeft;
+    }, 5000);
   };
 
   //https://codepen.io/tdextrous/pen/ROBvyz?editors=0010
@@ -72,7 +74,7 @@ export default function HomepageLinkWrapper({ project }) {
   }
 
   return (
-    <a className={style.linkwrapper} href={`${project.slug}`} onMouseEnter={pauseScrollAnimation} onMouseLeave={continueScrollAnimation} onTouchStart={pauseScrollAnimation} onScroll={handleScroll} ref={linkRef} target="_blank" rel="noreferrer">
+    <a className={style.linkwrapper} href={`${project.slug}`} onMouseEnter={pauseScrollAnimation} onMouseLeave={continueScrollAnimation} onTouchStart={pauseScrollAnimation} onTouchEnd={continueScrollAnimation} onScroll={handleScroll} ref={linkRef} target="_blank" rel="noreferrer">
       {doubleLinkArr.map((component, index) => {
         let Component = components[component.type];
         return <Component key={index} {...component.params} />;
