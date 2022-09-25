@@ -7,7 +7,7 @@
   --number-of-projects: 7;
   --height-of-all-projects-desktop: 945px; /* Needs to be manually calculated and changed in HomePageLinkWrapper.module.css */
 
-  --project-height-XL: calc(90vh / var(--number-of-projects));
+  /* --project-height-XL: calc(90vh / var(--number-of-projects)); */
 
   --yellow: #fde138;
   --orange: #ffa61e;

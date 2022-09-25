@@ -1,22 +1,22 @@
 .title {
-  font-size: 60px;
+  font-size: calc(calc(45vh / var(--number-of-projects)));
   margin: auto var(--homepage-link-margin-left);
   white-space: nowrap;
 }
 
 /* Below S */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .title {
     font-size: 34px;
   }
-}
+} */
 
 /* Above S */
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .title {
     font-size: 60px;
   }
-}
+} */
 
 .title.gulax {
   font-family: var(--gulax-font);

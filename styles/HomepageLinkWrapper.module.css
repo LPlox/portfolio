@@ -4,11 +4,12 @@
   overflow-x: auto;
   height: 135px;
   flex-wrap: nowrap;
+  height: calc(90vh / var(--number-of-projects));
   /* width: 400%; */
   /* width: auto; */
   width: 100vw;
   position: relative;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 
   /* Removing scrollbar */
   -ms-overflow-style: none; /* IE and Edge */
@@ -23,25 +24,25 @@
 }
 
 /* Below S */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .linkwrapper {
     height: 80px;
   }
-}
+} */
 
 /* Above S */
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .linkwrapper {
     height: var(--project-height-desktop);
   }
-}
+} */
 
 /* When project height doesn't fill window height. Manual calculation */
-@media (min-height: 945px) {
+/* @media (min-height: 945px) {
   .linkwrapper {
     height: var(--project-height-XL);
   }
-}
+} */
 
 .linkwrapper::-webkit-scrollbar {
   display: none;
