@@ -17,6 +17,7 @@ const projectList = [
       { type: "TitleContainer", params: { title: "﹏ PWA ﹏", fonttype: "picnic" } },
       { type: "Tags", params: { tags: ["nuxt", "vue", "touch", "animation"] } },
     ],
+    id: "1",
   },
   {
     slug: "https://wise-materials.org/",
@@ -31,6 +32,7 @@ const projectList = [
       { type: "ImageContainer", params: { image: "dog04.png", styling: "spinBackwards" } },
       { type: "Tags", params: { tags: ["Javascript", "Wordpress", "animation"] } },
     ],
+    id: "2",
   },
   {
     slug: "https://travis-ci-globe.netlify.app/",
@@ -40,6 +42,7 @@ const projectList = [
       { type: "TitleContainer", params: { title: "CASTOR KTH HACKATHON", fonttype: "typefesse" } },
       { type: "Tags", params: { tags: ["3D", "WEBGL"] } },
     ],
+    id: "3",
   },
   {
     slug: "https://www.svenskplast.se/",
@@ -51,6 +54,7 @@ const projectList = [
       //   { type: "LinkDescription", params: { description: "Development notes: Animated graphical svg elements on scroll" } },
       { type: "ImageContainer", params: { image: "arrow_right.png", styling: "" } },
     ],
+    id: "4",
   },
   {
     slug: "https://jobbadigifysiskt.se/",
@@ -61,6 +65,7 @@ const projectList = [
       { type: "TitleContainer", params: { title: "✱ ✱ ✱ ✱ ✱ ✱ ✱", fonttype: "solidemirage" } },
       { type: "Tags", params: { tags: ["Jamstack", "Gridsome", "vue", "graphql"] } },
     ],
+    id: "5",
   },
   {
     slug: "https://sparvagsmuseet.se/",
@@ -76,6 +81,7 @@ const projectList = [
       { type: "Tags", params: { tags: ["react", "typescript", "contentful"] } },
       { type: "ImageContainer", params: { image: "train05.png", styling: "" } },
     ],
+    id: "6",
   },
   {
     slug: "https://player.vimeo.com/video/716758661?h=b870e802ee&dnt=1&app_id=122963",
@@ -86,6 +92,7 @@ const projectList = [
       { type: "ImageContainer", params: { image: "fishbones.png", styling: "" } },
       { type: "Tags", params: { tags: ["3D", "Effect house", "tiktok"] } },
     ],
+    id: "7",
   },
 ];
 

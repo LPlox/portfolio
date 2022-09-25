@@ -4,15 +4,22 @@
   overflow-x: auto;
   height: 135px;
   flex-wrap: nowrap;
-  width: auto;
+  /* width: 400%; */
+  /* width: auto; */
   width: 100vw;
   position: relative;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 
   /* Removing scrollbar */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   border-bottom: var(--border-light);
+
+  /* animation: marquee 10s linear infinite; */
+}
+
+.linkwrapper:hover {
+  animation-play-state: paused;
 }
 
 /* Below S */
@@ -40,16 +47,11 @@
   display: none;
 }
 
-/* SM */
-/* @media (max-width: 480px) {
-  .linkwrapper {
-    padding-left: var(--homepage-body-padding-mobile);
+/* @keyframes marquee {
+  0% {
+    left: 0%;
   }
-} */
-
-/* Above SM */
-/* @media (min-width: 480px) {
-  .linkwrapper {
-    padding-left: var(--homepage-body-padding-desktop);
+  100% {
+    left: -100%;
   }
 } */
