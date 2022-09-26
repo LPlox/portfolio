@@ -17,35 +17,53 @@ export default function HomepageLinkWrapper({ project }) {
   const doubleLinkArr = [...project.order, ...project.order, ...project.order, ...project.order];
   const rate = 0.5;
 
-  let hover = false;
+  let hover = false,
+    minScrollLeft = 1,
+    maxScrollLeft;
   const requestRef = useRef();
   const previousTimeRef = useRef(0);
 
   useEffect(() => {
     //handleScroll
-    linkRef.current.scrollLeft = linkRef.current.scrollWidth / 4 - 10;
+    maxScrollLeft = linkRef.current.scrollWidth / 4;
+
+    console.log(linkRef.current.scrollWidth / 4);
 
     // ScrollCount
-    previousTimeRef.current = linkRef.current.scrollWidth / 4 - 10;
+    if (project.id % 2 == 0) {
+      previousTimeRef.current = 5;
+      linkRef.current.scrollLeft = minScrollLeft;
+    } else if (!project.id % 2 == 0) {
+      previousTimeRef.current = maxScrollLeft;
+      linkRef.current.scrollLeft = maxScrollLeft;
+    }
+
     requestRef.current = requestAnimationFrame(animateScroll);
     return () => cancelAnimationFrame(requestRef.current);
   }, []);
 
   //https://stackoverflow.com/questions/62653091/cancelling-requestanimationrequest-in-a-react-component-using-hooks-doesnt-work
   const animateScroll = () => {
-    if (!hover && project.id % 2 == 0) {
-      previousTimeRef.current += rate;
-      linkRef.current.scrollLeft = previousTimeRef.current;
-    } else if (!hover && !project.id % 2 == 0) {
-      previousTimeRef.current -= rate;
-      linkRef.current.scrollLeft = previousTimeRef.current;
+    if (!hover) {
+      if (project.id % 2 == 0) {
+        previousTimeRef.current += rate;
+        linkRef.current.scrollLeft = previousTimeRef.current;
+      } else if (!project.id % 2 == 0) {
+        previousTimeRef.current -= rate;
+        linkRef.current.scrollLeft = previousTimeRef.current;
+      }
+
+      //   if (project.id == 1) {
+      //     console.log("link: " + linkRef.current.scrollLeft, "count: " + previousTimeRef.current);
+      //     console.log(minScrollLeft, linkRef.current.scrollLeft);
+      //   }
     }
 
     requestRef.current = requestAnimationFrame(animateScroll);
-    // console.log(linkRef.current);
   };
 
   const pauseScrollAnimation = () => {
+    linkRef.current.scrollLeft = previousTimeRef.current;
     hover = true;
   };
 
@@ -62,20 +80,17 @@ export default function HomepageLinkWrapper({ project }) {
   };
 
   //https://codepen.io/tdextrous/pen/ROBvyz?editors=0010
-  //https://www.storyblok.com/tp/react-dynamic-component-from-json
-  //https://stackoverflow.com/questions/41305344/reactjs-transferring-props-to-dynamic-component
-  //https://stackoverflow.com/questions/63203220/i-want-to-implement-react-horizontal-infinite-scroll-not-getting-proper-solutio
 
   function handleScroll(e) {
     const container = e.currentTarget;
-    const minScrollLeft = 5;
-    const maxScrollLeft = container.scrollWidth / 4;
 
     if (maxScrollLeft < container.scrollLeft) {
       container.scrollLeft = minScrollLeft;
     } else if (minScrollLeft > container.scrollLeft) {
       container.scrollLeft = maxScrollLeft;
     }
+
+    previousTimeRef.current = container.scrollLeft;
   }
 
   return (
