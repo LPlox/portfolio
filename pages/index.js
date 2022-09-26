@@ -6,7 +6,7 @@ import LinkWrapper from "../components/HomepageLinkWrapper";
 
 const projectList = [
   {
-    slug: "https://drive.google.com/file/d/1iPHFFlYQxnTFg6wUpLCFh2oicT1C-6xq/view",
+    slug: "https://youtu.be/XUCcWH_OOnk",
     order: [
       { type: "TitleContainer", params: { title: "﹏ KIA ﹏", fonttype: "picnic" } },
       { type: "ImageContainer", params: { image: "kia01.png", styling: "" } },
@@ -115,6 +115,10 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <p>
+          All fonts used are from
+          <a href="https://velvetyne.fr/" target="_blank" rel="noreferrer">
+            velvetyne
+          </a>{" "}
           2020 | Dogs icons by Anya Derevyanko from{" "}
           <a href="https://thenounproject.com/browse/collection-icon/dogs-140344/?p=1" target="_blank" rel="noreferrer">
             Noun Project
