@@ -8,7 +8,7 @@
 }
 
 /* Below S */
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   .container {
     min-width: 50px;
     min-height: 50px;
@@ -21,7 +21,7 @@
 }
 
 /* Above S */
-@media (min-width: 600px) {
+@media (min-width: 960px) {
   .container {
     min-width: 100px;
     min-height: 100px;

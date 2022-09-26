@@ -4,20 +4,6 @@
   white-space: nowrap;
 }
 
-/* Below S */
-/* @media (max-width: 600px) {
-  .title {
-    font-size: 34px;
-  }
-} */
-
-/* Above S */
-/* @media (min-width: 600px) {
-  .title {
-    font-size: 60px;
-  }
-} */
-
 .title.gulax {
   font-family: var(--gulax-font);
 }

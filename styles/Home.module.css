@@ -4,9 +4,6 @@
 }
 
 .footer {
-  /* position: absolute;
-  bottom: 0;
-  left: 0; */
   font-family: var(--gulax-font);
   padding: var(--homepage-link-margin-left);
   border-top: var(--border-light);
@@ -20,25 +17,3 @@
 .footer a {
   border-bottom: 1px solid var(--foreground-light);
 }
-
-/* 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-}
- */

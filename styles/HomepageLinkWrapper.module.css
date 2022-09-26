@@ -5,8 +5,6 @@
   height: 135px;
   flex-wrap: nowrap;
   height: calc(90vh / var(--number-of-projects));
-  /* width: 400%; */
-  /* width: auto; */
   width: 100vw;
   position: relative;
   overflow-y: hidden;
@@ -15,44 +13,26 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   border-bottom: var(--border-light);
-
-  /* animation: marquee 10s linear infinite; */
 }
 
 .linkwrapper:hover {
   animation-play-state: paused;
 }
 
-/* Below S */
-/* @media (max-width: 600px) {
+/* Below M */
+@media (max-width: 960px) {
   .linkwrapper {
-    height: 80px;
+    min-height: 80px;
   }
-} */
+}
 
-/* Above S */
-/* @media (min-width: 600px) {
+/* Above M */
+@media (min-width: 960px) {
   .linkwrapper {
-    height: var(--project-height-desktop);
+    min-height: 135px;
   }
-} */
-
-/* When project height doesn't fill window height. Manual calculation */
-/* @media (min-height: 945px) {
-  .linkwrapper {
-    height: var(--project-height-XL);
-  }
-} */
+}
 
 .linkwrapper::-webkit-scrollbar {
   display: none;
 }
-
-/* @keyframes marquee {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: -100%;
-  }
-} */
