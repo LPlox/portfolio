@@ -13,6 +13,7 @@
   border: var(--border-light);
   font-family: var(--gulax-font);
   text-transform: uppercase;
+  background-color: var(--background-light);
 }
 
 /* Below S */
