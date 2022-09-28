@@ -27,12 +27,10 @@ export default function HomepageLinkWrapper({ project }) {
     //handleScroll
     maxScrollLeft = linkRef.current.scrollWidth / 4;
 
-    console.log(linkRef.current.scrollWidth / 4);
-
     // ScrollCount
     if (project.id % 2 == 0) {
       previousTimeRef.current = 5;
-      linkRef.current.scrollLeft = minScrollLeft;
+      linkRef.current.scrollLeft = minScrollLeft + 10; // + 10 to prevent lagging bug
     } else if (!project.id % 2 == 0) {
       previousTimeRef.current = maxScrollLeft;
       linkRef.current.scrollLeft = maxScrollLeft;
@@ -52,11 +50,6 @@ export default function HomepageLinkWrapper({ project }) {
         previousTimeRef.current -= rate;
         linkRef.current.scrollLeft = previousTimeRef.current;
       }
-
-      //   if (project.id == 1) {
-      //     console.log("link: " + linkRef.current.scrollLeft, "count: " + previousTimeRef.current);
-      //     console.log(minScrollLeft, linkRef.current.scrollLeft);
-      //   }
     }
 
     requestRef.current = requestAnimationFrame(animateScroll);
