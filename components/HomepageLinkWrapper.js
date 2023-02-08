@@ -14,41 +14,56 @@ export default function HomepageLinkWrapper({ project }) {
   };
 
   const linkRef = useRef(null);
-  const doubleLinkArr = [...project.order, ...project.order, ...project.order, ...project.order];
+  const doubleLinkArr = [
+    ...project.order,
+    ...project.order,
+    ...project.order,
+    ...project.order,
+  ];
   const rate = 0.5;
 
   let hover = false,
-    minScrollLeft = 1,
-    maxScrollLeft;
+    minScrollLeft = 2,
+    maxScrollLeft,
+    leftToRightDir,
+    cloneWidth,
+    windowWidth = 0,
+    disableScroll = false;
   const requestRef = useRef();
-  const previousTimeRef = useRef(0);
+  const previousPosRef = useRef(0);
+
+  const reCalc = () => {
+    windowWidth = window.innerWidth;
+    cloneWidth = linkRef.current.scrollWidth / 4;
+    maxScrollLeft = linkRef.current.scrollWidth - windowWidth - minScrollLeft;
+  };
 
   useEffect(() => {
-    //handleScroll
-    maxScrollLeft = linkRef.current.scrollWidth / 4;
+    leftToRightDir = project.id % 2 == 0;
+    reCalc();
 
-    // ScrollCount
-    if (project.id % 2 == 0) {
-      previousTimeRef.current = 5;
-      linkRef.current.scrollLeft = minScrollLeft + 10; // + 10 to prevent lagging bug
-    } else if (!project.id % 2 == 0) {
-      previousTimeRef.current = maxScrollLeft;
-      linkRef.current.scrollLeft = maxScrollLeft;
-    }
+    previousPosRef.current = maxScrollLeft;
+    linkRef.current.scrollLeft = maxScrollLeft;
+
+    window.addEventListener("resize", reCalc);
+    window.addEventListener("load", reCalc);
 
     requestRef.current = requestAnimationFrame(animateScroll);
-    return () => cancelAnimationFrame(requestRef.current);
+    return () => {
+      window.removeEventListener("resize", reCalc);
+      cancelAnimationFrame(requestRef.current);
+    };
   }, []);
 
   //https://stackoverflow.com/questions/62653091/cancelling-requestanimationrequest-in-a-react-component-using-hooks-doesnt-work
   const animateScroll = () => {
     if (!hover) {
-      if (project.id % 2 == 0) {
-        previousTimeRef.current += rate;
-        linkRef.current.scrollLeft = previousTimeRef.current;
-      } else if (!project.id % 2 == 0) {
-        previousTimeRef.current -= rate;
-        linkRef.current.scrollLeft = previousTimeRef.current;
+      if (leftToRightDir) {
+        previousPosRef.current += rate;
+        linkRef.current.scrollLeft = previousPosRef.current;
+      } else if (!leftToRightDir) {
+        previousPosRef.current -= rate;
+        linkRef.current.scrollLeft = previousPosRef.current;
       }
     }
 
@@ -56,19 +71,19 @@ export default function HomepageLinkWrapper({ project }) {
   };
 
   const pauseScrollAnimation = () => {
-    linkRef.current.scrollLeft = previousTimeRef.current;
+    linkRef.current.scrollLeft = previousPosRef.current;
     hover = true;
   };
 
   const continueScrollAnimation = () => {
     hover = false;
-    previousTimeRef.current = linkRef.current.scrollLeft;
+    previousPosRef.current = linkRef.current.scrollLeft;
   };
 
   const continueScrollAnimationWithDelay = () => {
     setInterval(() => {
       hover = false;
-      previousTimeRef.current = linkRef.current.scrollLeft;
+      previousPosRef.current = linkRef.current.scrollLeft;
     }, 5000);
   };
 
@@ -77,17 +92,38 @@ export default function HomepageLinkWrapper({ project }) {
   function handleScroll(e) {
     const container = e.currentTarget;
 
-    if (maxScrollLeft < container.scrollLeft) {
-      container.scrollLeft = minScrollLeft;
-    } else if (minScrollLeft > container.scrollLeft) {
-      container.scrollLeft = maxScrollLeft;
+    if (!disableScroll) {
+      if (maxScrollLeft <= container.scrollLeft) {
+        //Going right
+        //Because each section is not 100vw we have to calculate where the section matches the ending of a clone section
+        container.scrollLeft = cloneWidth - windowWidth;
+        disableScroll = true;
+      } else if (minScrollLeft >= container.scrollLeft) {
+        //Going left
+        container.scrollLeft = cloneWidth * 3;
+        disableScroll = true;
+      }
+      previousPosRef.current = container.scrollLeft;
     }
 
-    previousTimeRef.current = container.scrollLeft;
+    setTimeout(() => {
+      disableScroll = false;
+    }, 40);
   }
 
   return (
-    <a className={style.linkwrapper} href={`${project.slug}`} onMouseEnter={pauseScrollAnimation} onMouseLeave={continueScrollAnimation} onTouchStart={pauseScrollAnimation} onTouchEnd={continueScrollAnimationWithDelay} onScroll={handleScroll} ref={linkRef} target="_blank" rel="noreferrer">
+    <a
+      className={style.linkwrapper}
+      href={`${project.slug}`}
+      onMouseEnter={pauseScrollAnimation}
+      onMouseLeave={continueScrollAnimation}
+      onTouchStart={pauseScrollAnimation}
+      onTouchEnd={continueScrollAnimationWithDelay}
+      onScroll={handleScroll}
+      ref={linkRef}
+      target="_blank"
+      rel="noreferrer"
+    >
       {doubleLinkArr.map((component, index) => {
         let Component = components[component.type];
         return <Component key={index} {...component.params} />;
