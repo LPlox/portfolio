@@ -6,16 +6,16 @@ import LinkWrapper from "../components/HomepageLinkWrapper";
 
 const projectList = [
   {
-    slug: "https://youtu.be/XUCcWH_OOnk",
+    slug: "https://hyundai-sunday.se/",
     order: [
-      { type: "TitleContainer", params: { title: "﹏ KIA ﹏", fonttype: "picnic" } },
-      { type: "ImageContainer", params: { image: "kia01.png", styling: "" } },
-      { type: "TitleContainer", params: { title: "﹏ INSTORE ﹏", fonttype: "picnic" } },
-      { type: "ImageContainer", params: { image: "kia02.png", styling: "" } },
-      { type: "TitleContainer", params: { title: "﹏ Touch screen ﹏", fonttype: "picnic" } },
-      { type: "ImageContainer", params: { image: "kia03.png", styling: "" } },
-      { type: "TitleContainer", params: { title: "﹏ PWA ﹏", fonttype: "picnic" } },
-      { type: "Tags", params: { tags: ["nuxt", "vue", "touch", "animation"] } },
+      { type: "TitleContainer", params: { title: "﹏ Hyundai ﹏", fonttype: "picnic" } },
+      { type: "ImageContainer", params: { image: "sunday_2.jpg", styling: "" } },
+      { type: "TitleContainer", params: { title: "﹏ Sunday ﹏", fonttype: "picnic" } },
+      { type: "ImageContainer", params: { image: "sunday_1.jpg", styling: "" } },
+      { type: "TitleContainer", params: { title: "﹏ AI Generated ﹏", fonttype: "picnic" } },
+      { type: "ImageContainer", params: { image: "sunday_3.jpg", styling: "" } },
+      { type: "TitleContainer", params: { title: "﹏ Activity Generator ﹏", fonttype: "picnic" } },
+      { type: "Tags", params: { tags: ["chatGPT", "Animation", "Mapbox", "Javascript"] } },
     ],
     id: "1",
   },
@@ -35,14 +35,13 @@ const projectList = [
     id: "2",
   },
   {
-    slug: "https://travis-ci-globe.netlify.app/",
+    slug: "https://www.24hrcares.com/",
     order: [
-      { type: "TitleContainer", params: { title: "TRAVIS", fonttype: "typefesse" } },
-      { type: "ImageContainer", params: { image: "globe.png", styling: "" } },
-      { type: "TitleContainer", params: { title: "CASTOR KTH HACKATHON", fonttype: "typefesse" } },
-      { type: "ImageContainer", params: { image: "globe.png", styling: "" } },
-      { type: "TitleContainer", params: { title: "TRAVIS", fonttype: "typefesse" } },
-      { type: "Tags", params: { tags: ["3D", "WEBGL"] } },
+      { type: "TitleContainer", params: { title: "24 Hour", fonttype: "solidemirage" } },
+      { type: "TitleContainer", params: { title: "✱ ✱ ✱ ✱ ✱ ✱ ✱", fonttype: "solidemirage" } },
+      { type: "TitleContainer", params: { title: "Home Care", fonttype: "solidemirage" } },
+      { type: "TitleContainer", params: { title: "✱ ✱ ✱ ✱ ✱ ✱ ✱", fonttype: "solidemirage" } },
+      { type: "Tags", params: { tags: ["Jamstack", "Next", "Prismic"] } },
     ],
     id: "3",
   },
@@ -62,13 +61,14 @@ const projectList = [
     id: "4",
   },
   {
-    slug: "https://jobbadigifysiskt.se/",
+    slug: "https://travis-ci-globe.netlify.app/",
     order: [
-      { type: "TitleContainer", params: { title: "JOBBA DIGIFYSISKT", fonttype: "solidemirage" } },
-      { type: "TitleContainer", params: { title: "✱ ✱ ✱ ✱ ✱ ✱ ✱", fonttype: "solidemirage" } },
-      { type: "TitleContainer", params: { title: "REGION STOCKHOLM", fonttype: "solidemirage" } },
-      { type: "TitleContainer", params: { title: "✱ ✱ ✱ ✱ ✱ ✱ ✱", fonttype: "solidemirage" } },
-      { type: "Tags", params: { tags: ["Jamstack", "Gridsome", "vue", "graphql"] } },
+      { type: "TitleContainer", params: { title: "TRAVIS", fonttype: "typefesse" } },
+      { type: "ImageContainer", params: { image: "globe.png", styling: "" } },
+      { type: "TitleContainer", params: { title: "CASTOR KTH HACKATHON", fonttype: "typefesse" } },
+      { type: "ImageContainer", params: { image: "globe.png", styling: "" } },
+      { type: "TitleContainer", params: { title: "TRAVIS", fonttype: "typefesse" } },
+      { type: "Tags", params: { tags: ["3D", "WEBGL"] } },
     ],
     id: "5",
   },
@@ -129,7 +129,11 @@ export default function Home() {
             Noun Project
           </a>{" "}
           | Train icons by Lluisa Iborra from{" "}
-          <a href="https://thenounproject.com/browse/collection-icon/toy-train-40887/?p=1" target="_blank" rel="noreferrer">
+          <a
+            href="https://thenounproject.com/browse/collection-icon/toy-train-40887/?p=1"
+            target="_blank"
+            rel="noreferrer"
+          >
             Noun Project
           </a>{" "}
           | Fish icon by DinosoftLab from{" "}
